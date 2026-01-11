@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harbor Light Community Center</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1E90FF;
+      color: #fff;
+      margin: 0;
+      text-align: center;
+    }
+    .nav {
+      background-color: #004080;
+      padding: 15px;
+    }
+    .nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .section {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+    p {
+      background-color: #f9f9f9;
+      color: #333;
+      display: inline-block;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Harbor Light Community Center</h1>
+
+  <div class="nav">
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About Us</a>
+    <a onclick="showSection('services')">Services</a>
+    <a onclick="showSection('events')">Events</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </div>
+
+  <div id="home" class="section active">
+    <p>Welcome to Harbor Light Community where your problem goes away.</p>
+  </div>
+
+  <div id="about" class="section">
+    <p>The Harbor Light Community Center has been at the heart of our community for over 30 years, 
+    offering a wide range of services and programs designed to support and enrich the lives of our residents.</p>
+    <img src="https://edube.org/uploads/media/default/0001/04/community-center.jpg" alt="Community Center">
+  </div>
+
+  <div id="services" class="section">
+    <p>From educational workshops and sports leagues to wellness programs and art classes, 
+    our services are tailored to meet the diverse needs of our community members.</p>
+  </div>
+
+  <div id="events" class="section">
+    <p>Our community center is a hub of activity, hosting events throughout the year. 
+    Don't miss our annual summer festival for fun, food, and festivities for all ages.</p>
+    <p><strong>Annual Summer Festival:</strong> Starts July 20, 2050</p>
+  </div>
+
+  <div id="contact" class="section">
+    <p>Have questions or want to get involved? Email us at 
+      <a href="mailto:info@harborlight.org">info@harborlight.org</a> 
+      or call <a href="tel:+1234567890">+1 (234) 567‑890</a>.
+    </p>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
